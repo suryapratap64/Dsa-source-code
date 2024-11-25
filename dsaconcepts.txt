@@ -1,0 +1,2 @@
+->maximise the use of recursion in recursion you to choose first base case ,then all case recursion already solve ksr dega.
+->index storing concept is most inmporttant in the array;

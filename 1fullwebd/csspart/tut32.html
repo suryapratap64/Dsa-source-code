@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute and nth child pseudo selector</title>
+    <style>
+        .container{
+            display: block;
+            width: 233px;
+            margin: auto;
+
+        }
+        input{
+            display: block;
+            border: 3px solid red;
+
+        }
+        /* sudo selector */
+        input[type='text']{
+            padding: 23px;
+            border: 2px solid red;
+        }
+        a[target]{
+            font-size:44px;
+            color:violet
+        }
+        a[target='_self']{
+            font-size:44px;
+            color:rgb(84, 166, 67)
+        }
+        /* this will applies css for third child */
+        /* li:nth-child(3){
+            color: palegreen;
+
+        } */
+        /* li:nth-child(2n+1){
+            color: blue;
+        } */
+        li:nth-child(even){
+            color: red;
+        }
+        li:nth-child(odd){
+            color: rgb(200, 20, 161);
+        }
+    
+    </style>
+</head>
+<body>
+    <div>
+    
+    <h1><a href="http://google.com" target="_blank"> go to google</a></h1>
+    <h1><a href="http://facebook.com" target="_self"> go to google</a></h1>
+    <form action="" class="from-control">
+        <input type="text" placeholder="enter your name">
+        <input type="password" placeholder="enter your password">
+        <input type="submit" value="submit">
+    </form>
+    </form>
+    <ul>
+        <li class="item" id="item1">item1</li>
+        <li class="item" id="item2">item2</li>
+        <li class="item" id="item3">item3</li>
+        <li class="item" id="item4">item 4</li>
+        <li class="item" id="item5">item5</li>
+        <li class="item" id="item1">item6</li>
+        <li class="item" id="item2">item7</li>
+        <li class="item" id="item3">item8</li>
+        <li class="item" id="item4">item 9</li>
+        <li class="item" id="item5">item10 </li>
+
+    </ul>
+</div>
+    
+</body>
+</html>

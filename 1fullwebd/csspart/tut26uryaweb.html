@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>surya.movie</title>
+    <style>
+         .container{
+            border: 2px solid;
+            background-color: aqua;
+            height: 3400px;
+        }
+       /* css position: static (:default),absolute,relative,,fixed,sticky */
+        .box{
+            display: inline-block;
+            border:2px solid red;
+            width: 250px;
+            height: 200px;
+            margin: 2px;
+
+
+        }
+        #box3{
+            /* relative:relative to its normal position */
+            /* position: absolute;
+            left: 40px;
+            bottom: 40px; */
+
+             /* absolute:absolute to its parent position */
+             /* position: fixed;
+             right: 4px;
+             bottom: 2px; */
+             /* fixed:postion the elment relative to the browser window */
+             position: sticky;
+             /* sticky:this means fixed at any point for menu */
+             top: 4px;
+        }
+        .nav{
+            border: solid green;
+            color: red;
+            background-color:  3px pink;
+        }
+        .navbar{
+            background-color: rgb(221, 161, 10);
+            border-radius: 5px;
+            float:none;
+            
+        }
+        .navbar ul{
+
+            overflow: auto;
+            
+        }
+        .navbar li{
+            float: left;
+
+            list-style: none;
+            padding: 5px 5px;
+
+        }
+        .navbar li a{
+            padding: 5px 5px;
+            text-decoration: none;
+            color: rgb(18, 5, 196);
+        }
+        .navbar li a:hover{
+         background-color: rgb(200, 75, 38);
+        }
+        .search{
+            float: right;
+            color: wheat;
+            padding: 4px 7px;
+        }
+        .navbar input{
+            border-radius: 55px;
+            padding: 2px;
+            padding: 3px 25px;
+            width: 124px;
+        }
+        .surya{
+            color: red;
+            text-decoration:double;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class="nav">
+            <p>download movie</p>
+
+    </div></div>
+    <div class="container">
+        <div class="box" id="box1">hi bro</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box4">4</div>
+        <div class="box" id="box3">chat width with surya Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto voluptatibus autem possimus asperiores illum quos eius maxime. Hic dolore illo, officiis, ratione nihil esse facilis, porro facere libero doloremque sit!</div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio amet necessitatibus ipsam ut placeat similique vel minus, veniam quam tempora. Error cupiditate nulla non dolores obcaecati fuga ipsam vero magni!</h3>
+
+        </div>
+        <div class="box">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio amet necessitatibus ipsam ut placeat similique vel minus, veniam quam tempora. Error cupiditate nulla non dolores obcaecati fuga ipsam vero magni!</h3>
+
+        </div>
+        <div class="box">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio amet necessitatibus ipsam ut placeat similique vel minus, veniam quam tempora. Error cupiditate nulla non dolores obcaecati fuga ipsam vero magni!</h3>
+
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Sequence Matching</title>
+    <style>
+        body {
+            background: fixed;
+            height: 100vh;
+            
+            background-image: url(img.jpg);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            font: bold;
+        
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #090101;
+        }
+        form {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            margin : 10px 20px;
+        }
+        input[type="text"] {
+            width: 400px;
+            padding: 8px;
+           text-size-adjust: 4px;
+            margin-bottom: 10px;
+            border: 3px solid #5ac6f0;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #result {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fdfdfd;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        #vid{
+            position: absolute;
+            margin: 171px 72px;
+            height: 300px;
+            width: 200px;
+        }
+    </style>
+    <script>
+        // Function to find DNA pattern occurrences in a text
+        function findDNAMatches(text, pattern) {
+            const occurrences = [];
+            const textLength = text.length;
+            const patternLength = pattern.length;
+
+            for (let i = 0; i <= textLength - patternLength; i++) {
+                let j;
+                for (j = 0; j < patternLength; j++) {
+                    if (text[i + j] !== pattern[j])
+                        break;
+                }
+                if (j === patternLength)
+                    occurrences.push(i);
+            }
+            return occurrences;
+        }
+
+        // Function to handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const text = document.getElementById('text').value;
+            const pattern = document.getElementById('pattern').value;
+
+            // Find all occurrences of the pattern in the text
+            const occurrences = findDNAMatches(text, pattern);
+
+            // Display the positions of pattern occurrences
+            const resultElement = document.getElementById('result');
+            if (occurrences.length > 0) {
+                let result = `Pattern "${pattern}" found at positions:<br>`;
+                occurrences.forEach(position => {
+                    result += position + '<br>';
+                });
+                resultElement.innerHTML = result;
+            } else {
+                resultElement.innerHTML = `Pattern "${pattern}" not found in the text.`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>DNA Sequence Matching</h1>
+        <form onsubmit="handleFormSubmit(event)">
+            <label for="text">Enter DNA Sequence:</label><br>
+            <input type="text" id="text" name="text" value="ACGTTGCATGTCGCATGATGCATGAGAGCT"><br>
+            <label for="pattern">Enter Pattern to Match:</label><br>
+            <input type="text" id="pattern" name="pattern" value="GCATG"><br><br>
+            <button type="submit">Find Matches</button>
+           
+        </form>
+        <div id="result"></div>
+       
+    </div>
+</body>
+</html>
+

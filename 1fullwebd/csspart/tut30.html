@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box{ width: 100%;
+            font-size: 72px;
+            text-align: center;
+            background-color: red;
+            color: rgb(107, 240, 18);
+            display: none;
+        }
+        /* media types  */
+        @media  only screen and (max-width:300px){
+            #box1{
+                display: block;
+                background-color: cadetblue;
+            }
+        }
+        @media (min-width:300px)and(max-width:500px){
+            #box2{
+                display: block;
+                background-color: blueviolet;
+            }
+        }
+        @media (min-width:500px)and(max-width:800px){
+            #box3{
+                display: block;
+                background-color: rgb(148, 202, 12);
+            }
+        }
+        @media (min-width:800px)and(max-width:1200px){
+            #box4{
+                display: block;
+                background-color: rgb(18, 10, 160);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">mai ek hacker hun</div>
+    <div class="box" id="box2">mai ek programmer hun</div>
+    <div class="box" id="box3"> mai ek coder hun </div>
+    <div class="box" id="box4">mai ek trader hun</div>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Transitions</title>
+</head>
+<style>
+    body{
+        background-color: rgb(248, 241, 241);
+    }
+    #box{
+        margin: 40px 20px;
+        display: flex;
+        height: 200px;
+        width: 200px;
+        background-color: rgb(51, 255, 0);
+        justify-content: center;
+        align-items: center;
+        transition: all 0.004s ease-in-out .01s;
+    }
+    #box:hover{
+        
+        background-color: rgb(8, 154, 177);
+        height: 300px;
+        width: 300px;
+        border-radius: 19px;
+        font-size: 20px;  }
+
+</style>
+<body>
+    <h3>welcome fullstack developers</h3>
+    <div class="container">
+        <div id="box">
+            welcome to web_dev_sps01
+        </div>
+    </div>
+</body>
+</html>

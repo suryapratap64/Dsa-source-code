@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>3
+    <meta charset="UTF-8">
+    <title>DNA Sequencing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="surya.js"></script>
+</head>
+<style>
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a29c6;
+}
+
+#outputResult {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.container{
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/09/15/27/dna-1811955_1280.jpg');
+}
+ 
+</style>
+
+<body>
+    <div class="container">
+        <h1>DNA Sequencing</h1>
+        <label for="inputDNA">Enter DNA Sequence 1:</label>
+        <label for="inputDNA">Enter DNA Sequence 2:</label>
+        <textarea id="inputDNA" rows="4" cols="50"></textarea>
+        <button onclick="sequenceDNA()">Sequence</button>
+        <h2>Result:</h2>
+        <div id="outputResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

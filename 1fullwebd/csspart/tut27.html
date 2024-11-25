@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility and z- index</title>
+    <style>
+        .box{
+          
+            width: 170px;
+            height: 170px;
+            border: 2px solid black;
+        }
+        #box1{
+            position: relative;
+            background-color: red;
+        z-index: 34;}
+        #box2{
+            position: relative;
+             z-index: -3;
+            /* z index will work only for posiiton relative,absolute,fixed,or sticky */
+            /* display: none; remove the place
+            visibility: hidden; not remove the place only remove color*/
+            background-color:green;}
+        #box3{background-color: hotpink;}
+        #box4{background-color: gold;}
+
+    </style>
+</head>
+<body>
+    <!-- div.box#box$*4 for multiple line id boxes -->
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>

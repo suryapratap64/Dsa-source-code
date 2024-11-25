@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+*{
+    box-sizing: border-box;
+}
+
+.container {
+  
+    height: 620px;
+    width: 1300px;
+    text-align: center;
+    background-image: url('https://scitechdaily.com/images/DNA-Genetics.gif');
+   
+    padding: 40px;
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(208, 38, 38, 0.1);
+    background-repeat:round;
+    position: sticky;
+    background-attachment: fixed;
+    
+
+    
+}
+#kno{
+    color: #f7ec0d;
+    
+    float: bottom;
+  
+    padding: 40px;
+    
+
+
+}
+
+.input1{
+
+color: rgba(231, 254, 23, 0.801);
+padding:7px 55pxh;
+}
+#box{
+    color: #73d24a;
+    position: relative;
+
+}
+#result{
+    color: rgba(220, 220, 232, 0.877);
+  
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+input {
+    
+    color:  rgb(255, 255, 255) ;
+    width: 30%;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: transparent;
+    box-shadow: 10px 10px 14px rgb(10, 0, 0);
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 1s;
+}
+button:hover{
+    box-shadow: 10px 10px 14px rgba(9, 0, 0, 0.989);
+    padding-bottom: 15px;
+
+}
+::placeholder{
+    color: #a4c1456e;
+}
+
+button:hover {
+    background-color: #2ecb0b;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
