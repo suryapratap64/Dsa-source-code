@@ -1,27 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-
-
-int main()
-{
-
-  
-    int t=1;
+int main() {
+    int t;
     cin >> t;
-
-    while (t--){
-        int n;
-         cin>>n;
-    string st;
-    string sp="aeiou";
-    for(int i=0;i<5;++i){
-        for(int j=0;j<n/5+(i<n%5);++j){}
-            st+=sp[i];
-
+    
+    while (t--) {
+        int k, l1, r1, l2, r2;
+        cin >> k >> l1 >> r1 >> l2 >> r2;
+        int c = 0;
+        
+        // Loop over l1 and l2 within the given ranges
+        for (int i = l1; i <= r1; ++i) {
+            for (int j = l2; j <= r2; ++j) {
+                int key = j / i;  // Integer division
+                if (key % k == 0) {
+                    c++;
+                }
+            }
+        }
+        
+        // Output the result for the current test case
+        cout << c << endl;
     }
-
-        return 0;
-    }
+    
+    return 0;
 }
