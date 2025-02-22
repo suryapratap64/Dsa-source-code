@@ -35,6 +35,7 @@ int main()
     }
     cout << endl;
     cout << "s present or not" << " " << s.count(8) << endl;
+    //count->this is used for searching element in the set
     set<int>::iterator itr = s.find(5);
     for (auto it = itr; it != s.end(); it++)
     {
