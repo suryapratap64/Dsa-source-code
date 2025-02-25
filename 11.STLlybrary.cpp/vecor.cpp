@@ -122,4 +122,6 @@ int main()
 
     //copying the vector
          vector<vector<int>> prevRows = generate(numRows - 1);
+   //sum of element in vector for n element 
+   int sum = accumulate(v.begin(), v.begin() + min(3, n), 0); // Sum top 3 or all if n < 3
 }

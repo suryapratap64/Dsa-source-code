@@ -10,6 +10,11 @@ string s = "hello world";
 string sub = s.substr(6, 5);  // Extracts "world"
 
 
+
+
+
+
+
 //string adding methods
  t[j]=s[i]; //by equal methods add the string;
 

@@ -2,6 +2,8 @@
 using namespace std;
 int main()
 {
+    //for modulo operation
+   //=> const int MOD = 1e9 + 7;
     int a = 2;
     int b = 3;
     cout << (a & b) << endl;

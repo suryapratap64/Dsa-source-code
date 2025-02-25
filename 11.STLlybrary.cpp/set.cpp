@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-/*Sets are a type of associative container in which each element has to be unique because the value of the element identifies it. The values are stored in a specific sorted order i.e. either ascending or descending.*/
+/*Sets are a type of associative container in which each element has to be unique because the value of the element identifies it. The values are stored in a specific sorted order default in ascending order i.e. either ascending or descending.*/
 
 #include <set>
 int main()
@@ -116,3 +116,19 @@ Return Value:
 Returns 1 if the element exists in the unordered_set.
 Returns 0 if the element does not exist.
 For unordered_set, the values are unique, so count() will always return either 0 or 1
+
+// for remove element from set
+mySet.erase(3);
+//for erasing  all set element
+mySet.clear();
+//for finding element in set
+if (mySet.find(3) != mySet.end()) {
+    cout << "Element found in set";
+}
+else {
+    cout << "Element not found in set";
+}
+
+
+
+
