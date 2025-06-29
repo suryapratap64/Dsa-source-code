@@ -10,6 +10,8 @@ string s = "hello world";
 string sub = s.substr(6, 5);  // Extracts "world"
 
 
+//count nuber of ones present inn the string
+int ones1 = count(s1.begin(), s1.end(), '1');
 
 
 
@@ -18,7 +20,7 @@ string sub = s.substr(6, 5);  // Extracts "world"
 //string adding methods
  t[j]=s[i]; //by equal methods add the string;
 
- // string initialization by this method;
+// string initialization by this method;
 string t(n, ' ');//n=size of string;
 /string t(n + m, ' ');
 // What it does:

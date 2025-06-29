@@ -124,4 +124,10 @@ int main()
          vector<vector<int>> prevRows = generate(numRows - 1);
    //sum of element in vector for n element 
    int sum = accumulate(v.begin(), v.begin() + min(3, n), 0); // Sum top 3 or all if n < 3
+   
 }
+
+//enter the vale for 1 to n value in vector
+
+vector<int> v(n);
+iota(v.begin(), v.end(), 1); // Fill vector with numbers 1 to n

@@ -1,45 +1,41 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool isPerfectSquare(int num) {
+    int root = sqrt(num);
+    return (root * root == num);
+}
+
 int main() {
     int t;
-    cin >> t;  
+    cin >> t;
     while (t--) {
         int n;
-        cin >> n ;
-
-        vector<int> a(n),b(n),c(n);
-        for(int i=0;i<n;i++){
-            cin >> a[i];
-
-
-        }
-        for(int i=0;i<n;i++){
-            cin >> b[i];
-            
-
+        cin >> n;
+        int x = (n * (n + 1)) / 2;
+        
+        // Check if the sum of first n numbers is a perfect square
+        if (isPerfectSquare(x)) {
+            cout << -1 << endl;
+            continue;
         }
 
-        for(int i=0;i<n;i++){
-            cin >> c[i];
+        vector<int> v(n);
+        iota(v.begin(), v.end(), 1);
+        for (int i =1;i<=n;i++) {
+
+            int y=(i*(i+1))/2;
+            if (isPerfectSquare(y)) {
+                swap(v[i-1], v[i ]);
+               i++;
+            }
+           
         }
-        vector<int>v;
-       
-       
-        for(int i=0;i<n;i++){
-        int e=max(a[i],max(b[i],c[i]));
-        v.push_back(e);
 
-
+        for (int i = 0; i < n; i++) {
+            cout << v[i] << " ";
         }
-        sort(v.begin(),v.end());
-
-
-       int  sum=v[n-1]+v[n-2]+v[n-3];
-        cout << sum << endl;
-
-       
-
+        cout << endl;
     }
     return 0;
 }

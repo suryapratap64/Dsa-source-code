@@ -8,7 +8,7 @@ int countprime(int n){
         if(prime[i]){
             cnt++;
             for(int j=2*i;j<n;j=j+i){
-                prime[j]=0;
+                 prime[j]=0;
 
             }
         }
