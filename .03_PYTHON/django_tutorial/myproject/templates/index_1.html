@@ -1,0 +1,11 @@
+{%load static%}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<h1>Hey welcome to my project</h1>
+
+<h5>my name is {{name}} <br> your age is {{age}}</h5>
+
+<form method="POST"  action="counter">
+    {% csrf_token %}
+    <textarea name="text"    rows="10" cols="20"    id=""></textarea >
+    <input type="submit">
+</form>

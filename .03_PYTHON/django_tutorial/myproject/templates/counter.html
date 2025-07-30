@@ -1,0 +1,5 @@
+{% for post in posts %}
+  <h1><a href="{% url 'post' post %}">Post {{ post }}</h1>
+{% endfor %}
+
+<h1>amount of word is {{ posts|length }}</h1>

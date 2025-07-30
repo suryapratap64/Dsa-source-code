@@ -1,0 +1,174 @@
+myapp is the sub project of main project;
+
+==>>>selecting interpeter is main part of python select python file in venv file
+
+2.django templates->
+in /myproject/setting.py having the templates function
+3.sending dynamic data to template->
+4.get and post
+->if not specify method they also consider a get method
+
+5.csrf token that prevent attack
+and this is uniquel;
+6.post is used for very secure information
+----
+7.static file in django
+like image an css
+8.Bootstrapmade  for free templates download;
+--------------------------
+9.django momdels-->
+->python manage.py makemigrations  ==> this commands sve the changes in the models
+->python manage.py migrate ==>> save changes in database
+
+-> after the local host write /admin show django authentication  database and connect
+
+10.create user name and password
+->python manage.py createsuperuser==>this
+username=>admin
+password=>211006
+
+->fetching data from data Base.
+
+11.user registration in django
+12.user login and logout in django
+13.Dynamic urls
+
+14.postgresql Setup
+->pip install psycopg2
+->pip install Pillow
+->python manage.py makemigrations
+->python manage.py migrate
+
+15.Tomi Blog
+->for ceateinfg new project
+->django-admin startproject blog
+->python -m django startproject blog
+->python manage.py startapp posts
+
+16.weather detector Application
+1->in setting.py me templates path like  "DIRS": [BASE_DIR/'templates'], ye set karo 
+2-> then second step installed appme app ka naam  like this INSTALLED_APPS = 
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    'weather'
+
+17.real time chat Application
+
+18. Django rest frame work
+
+->pip install djangorestframework
+
+19.Serializers
+->is a model serializer views 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Course Contents ⭐️
+⌨️ (0:00:00) Intro     
+⌨️ (0:01:58) Introduction To Python
+⌨️ (0:02:39) Installation Of Python                       
+⌨️ (0:06:30) Hello World In Python
+⌨️ (0:11:36) Variables In Python
+⌨️ (0:17:10) Strings In Python
+⌨️ (0:26:37) Numbers In Python
+⌨️ (0:37:19) Getting A User's Input
+⌨️ (0:42:34) Word Replacement Exercise
+⌨️ (0:47:08) List In Python
+⌨️ (1:03:05) List Methods
+⌨️ (1:16:28) Tuples In Python
+⌨️ (1:22:33) Functions In Python
+⌨️ (1:35:06) The Return Keyword                     
+⌨️ (1:40:45) IF Statements In Python
+⌨️ (2:03:21) Building An Even Number Checker Program
+⌨️ (2:05:05) Dictionaries In Python
+⌨️ (2:13:40) While Loops In Python
+⌨️ (2:19:47) For Loops In Python
+⌨️ (2:29:37) 2D Lists
+⌨️ (2:34:12) Comments In Python
+⌨️ (2:37:38) Building A Basic Calculator
+⌨️ (2:45:35) Try Except In Python
+⌨️ (2:53:28) Reading Files
+⌨️ (3:03:36) Writing Files
+⌨️ (3:09:17) Classes and Objects In Python
+⌨️ (3:16:43) Inheritance In Python
+⌨️ (3:19:31) The Python Shell
+⌨️ (3:25:17) Building A Simple Login and SignUp System
+⌨️ (3:31:04) Modules and PIP In Python
+⌨️ (3:38:28) Introduction To Django
+⌨️ (3:39:32) Installation Of Django
+⌨️ (3:59:49) Url Routing And Django Apps
+⌨️ (4:14:21) Django Template Language
+⌨️ (4:20:55) Sending Data To Template File
+⌨️ (4:28:12) Building A Word Counter In Django
+⌨️ (4:43:13) Get vs Post In Django
+⌨️ (4:49:21) Static Files In Django
+⌨️ (5:04:29) Introduction To Django Models
+⌨️ (5:29:02) Django Admin Panel & Manipulation Of Database
+⌨️ (5:46:38) User Registration In Django
+⌨️ (6:08:46) User Login And Logout In Django
+⌨️ (6:26:43) Dynamic Url Routing In Django
+⌨️ (6:37:24) Postgresql Setup
+⌨️ (6:47:23) Building A Blog With Django - Part 1
+⌨️ (7:12:10) Building A Blog With Django - Part 2
+⌨️ (7:25:48) Building A Weather App With Django - Part 1
+⌨️ (7:45:17) Building A Weather App With Django - Part 2
+⌨️ (8:03:06) Building A Realtime Chat Application With Django - Part 1
+⌨️ (8:50:11) Building A Realtime Chat Application With Django - Part 2
+⌨️ (9:07:59) Django Rest Framework Crash Course
+
