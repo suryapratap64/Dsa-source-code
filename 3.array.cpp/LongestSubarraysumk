@@ -1,0 +1,27 @@
+class Solution{
+public:
+    int longestSubarray(vector<int> &nums, int k){
+        int n=nums.size();
+        unordered_map<long long,int>presum;
+        long long sum=0;
+        int mxl=0;
+        for(int i=0;i<n;i++){
+            sum+=nums[i];
+            if(sum==k) mxl=max(mxl,i+1);
+            int rem=sum-k;
+
+            if(presum.find(rem)!=presum.end()){
+                int len=i-presum[rem];
+                mxl=max(mxl,len);
+            }
+            if(presum.find(sum)==presum.end()){
+                presum[sum]=i;
+            }
+
+
+        }
+
+return mxl;
+
+    }
+};
