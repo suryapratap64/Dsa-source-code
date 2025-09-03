@@ -28,6 +28,13 @@ int main (){
 
 
     }
+
+    
+    // Sort by value
+    sort(vec.begin(), vec.end(), [](auto &a, auto &b) {
+        return a.second < b.second; // ascending order of values
+    });
+
     //clear bassic concepts of map
      map<string, int> mp;
         string s = "";
