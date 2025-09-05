@@ -8,6 +8,12 @@ You need to convert it to the actual number by subtracting '0' from it: int key=
 .substr function=> for finding the sub part of the string ;
 string s = "hello world";
 string sub = s.substr(6, 5);  // Extracts "world"
+//s.substr(index,length);
+
+for converting intoloer case;
+=>result.push_back(tolower(s[index]));
+for upper case;
+==>toupper(s[index]);
 
 
 //count nuber of ones present inn the string
@@ -56,3 +62,5 @@ int main() {
 
     return 0;
 }
+//
+

@@ -1,0 +1,11 @@
+1.Oasis ai for full stack developer fully free
+2.jenkins is a  ci-cd pipeline tool;
+3.Napkin is a design tool and monk ai is a conversational ai tool and abacus is a math tool and n8n is an automation tool that use workflows to automate tasks and applications.
+4.HUgging Face is a platform for natural language processing and machine learning and more familiar with complex data set.
+5.Bolt.diy is a opensource platform for DIY projects and home automation using gemini free api bolt ka free version and download the code.
+6.Unsecured api key is a platform that allows users to access various APIs without proper authentication or authorization, potentially leading to security vulnerabilities.
+7. At github.com you change the github->uithub they the show full repo structure and github->gitmvp then this give you full code prompt.
+8.for documentation using for documentation these tools swagger,gitbook,Docusaurus is boaring process hai then for better use this repo https://www.playbook.com/. 
+9.Leeco ai free interview tools this is interview mentoring platform that provides various resources and tools to help users prepare for job interviews.
+10.prepgenix ai interview tools taht tells you about common interview questions and provides personalized feedback on your answers.
+11.

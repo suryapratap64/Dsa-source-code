@@ -4,7 +4,12 @@ bool findelement(vector<int>v,int s,int e,int key){
     if(s>e){
         return -1;
     }
-    int mid=(s+e)/2;
+    // This formula not used because 
+    //Once overflow happens, mid becomes wrong, and your binary search might break or loop infinitely.
+    //Using (s + e) / 2 in binary search works fine in many cases, but it has a hidden risk — integer overflow.
+    // int mid=(s+e)/2;
+
+    int mid = (s+(e-s))/2;
 
     if(v[mid]==key){
         return mid;

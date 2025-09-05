@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 #include <vector>
+//merge fuction of array
+merge(nums1.begin(), nums1.end(), nums2.begin(), nums2.end(),
+          merged.begin());
 
 // Find the maximum number of candies a child currently has.
 int maxCandies = *max_element(candies.begin(), candies.end());

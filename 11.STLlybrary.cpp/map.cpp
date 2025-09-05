@@ -5,6 +5,13 @@ int main (){
     map<int,string> m;
     //creating a two map at once
       unordered_map<char,int>map1,map2;
+//pushing value in array with in pair vlaue from a map
+✅ In short:
+// emplace_back(pair.second, pair.first) directly constructs a new element at the end of turn, using pair.second and pair.first as constructor arguments (in reversed order).
+vector<pair<int,int>> turn;    
+ sort(turn.begin(), turn.end());  //o/p=> (1,7) (2,5) (3,2) (3,4)
+
+ for(const auto& pair : list)  turn.emplace_back(pair.second, pair.first);
     
     m[1]="babbr";
     m[2]="surya";
@@ -28,6 +35,15 @@ int main (){
 
 
     }
+    // for loop inside iterator
+     for(auto it = turn.rbegin(); it != turn.rend(); ++it) 
+        {
+            sol.push_back(it->second);
+
+            k--;
+
+            if(k == 0) break;
+        }
     //clear bassic concepts of map
      map<string, int> mp;
         string s = "";
@@ -171,3 +187,5 @@ string paragraph;
 
 
 }
+//another tecnique to increase counter
+  alphabets[s[right]] = 1 + alphabets[s[right]];

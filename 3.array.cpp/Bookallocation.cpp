@@ -1,19 +1,48 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-    int arr[8]={5,54,3,6,36,3,3,6};
-    int s=0;
-    int sum=0;
-    int n;
-    cin>>n;
 
+bool isPossible(vector<int> &pages, int m, int mid) {
+    int studentCount = 1;
+    int pageSum = 0;
 
-
-    for(int i=0;i<n;i++){
-        sum+=arr[i];
+    for (int p : pages) {
+        if (pageSum + p <= mid) {
+            pageSum += p;
+        } else {
+            studentCount++;
+            pageSum = p;
+            if (studentCount > m || p > mid) {
+                return false;
+            }
+        }
     }
-    int e=
+    return true;
+}
 
+int bookAllocation(vector<int> &pages, int m) {
+    if (m > pages.size()) return -1; // not enough books
 
+    int low = *max_element(pages.begin(), pages.end());
+    int high = accumulate(pages.begin(), pages.end(), 0);
+    int ans = high;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (isPossible(pages, m, mid)) {
+            ans = mid;
+            high = mid - 1; // try smaller max
+        } else {
+            low = mid + 1;  // try larger max
+        }
+    }
+    return ans;
+}
+
+int main() {
+    vector<int> pages = {12, 34, 67, 90};
+    int m = 2;
+    cout << "Minimum possible maximum pages: "
+         << bookAllocation(pages, m) << endl;
     return 0;
 }

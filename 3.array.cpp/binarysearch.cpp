@@ -1,3 +1,17 @@
+// Difference Between Indexed and Value-Based Binary Search
+// Type	What we binary search on Example
+// Indexed-based ==>>We binary search over positions in the array Standard "find a number in sorted array"
+// Value-based  ==>> We binary search over possible answer values (not actual indices)	Aggressive Cows, Book Allocation, Min Time problems,Painter’s Partition Problem;
+
+//==>> If array is not sorted then compare values b/w arr[mid] and arr[l]or and arr[r];
+//==>> in binary search created a three condititon always ;
+//==>>
+
+// technique for binary search in hard problem value based;
+int low = *max_element(boards.begin(), boards.end());
+int high = accumulate(boards.begin(), boards.end(), 0); 
+
+
 #include<iostream>
 using namespace std;
 int binarysearch(int array[], int n){
