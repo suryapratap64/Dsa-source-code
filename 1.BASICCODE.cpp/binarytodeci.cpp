@@ -1,5 +1,20 @@
 #include <iostream>
 #include <math.h>
+//trick for num to binary 
+class Solution {
+public:
+    int reverseBits(int n) {
+        // in that num to string
+        string s = bitset<32>(n).to_string();
+
+        // reverse string
+        reverse(s.begin(), s.end());
+        // st0 num
+        bitset<32> rev(s);
+        
+        return (uint32_t)rev.to_ulong();
+    }
+};
 using namespace std;
 int main()
 {
