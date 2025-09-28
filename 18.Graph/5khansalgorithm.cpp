@@ -1,3 +1,8 @@
+// 🔹 What is it?
+
+// Kahn’s Algorithm is a BFS-based algorithm used to produce a topological ordering of a Directed Acyclic Graph (DAG).
+
+// A topological order of a DAG is a linear ordering of its vertices such that for every directed edge u → v, vertex u comes before v in the order.
 vector<int> topologicalSort(vector<vector<int>> &edges, int V, int E) {
     // Create adjacency list
     unordered_map<int, list<int>> adj;

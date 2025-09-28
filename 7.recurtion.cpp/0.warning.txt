@@ -1,0 +1,11 @@
+/*
+Recursion Concept:
+
+1. When a recursive function is called, the code **before the recursive call** executes immediately.
+2. The function then **calls itself**, going deeper into the recursion (toward the base case).
+3. After reaching the base case, the function **returns step by step**, executing any code **after the recursive call** in each function frame.
+4. In other words: 
+   - "Code before recursive call → executed while going deeper"
+   - "Code after recursive call → executed while returning from recursion"
+This is the general flow for **all recursive functions**.
+*/

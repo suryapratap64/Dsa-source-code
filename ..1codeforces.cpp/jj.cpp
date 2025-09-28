@@ -1,56 +1,79 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int solve(int i, int n,     vector<int>& a, vector<int>& dp, unordered_map<int, vector<int>>& pos) {
-    if (i >= n)  return 0;
-    if (dp[i] != -1) {
-return dp[i];
-    } 
-
-                 int ans = solve(i + 1, n, a, dp, pos);
-
-    int x = a[i];
-
-
-    auto &vec = pos[x];
-
-       auto it = lower_bound(vec.begin(), vec.end(), i);
-
-
-      int idx = it - vec.begin();
-
-    if (idx + x - 1 < (int)vec.size()) {
-        int endPos = vec[idx + x - 1];
-        ans = max(ans, x + solve(endPos + 1, n, a, dp, pos));
-    }
-
-    return dp[i] = ans;
-}
+using ll = long long;
+const ll NEG_INF = (ll)-9e18;
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    int t; cin >> t;
-    while (t--) {
-        int n; 
-        
-        cin >> n;
-        vector<int> a(n);
-
-
-        for (int i = 0; i < n; i++)
-        
-        {
-            cin >> a[i];
-        }
-        unordered_map<int, vector<int>> pos;
-        for (int i = 0; i < n; i++)
-        {
- pos[a[i]].push_back(i);
+    int T;
+    if (!(cin >> T)) return 0;
+    while (T--) {
+        int n;
+        ll y;
+        cin >> n >> y;
+        vector<int> c(n);
+        int maxC = 0;
+        for (int i = 0; i < n; ++i) {
+            cin >> c[i];
+            maxC = max(maxC, c[i]);
         }
 
-        vector<int> dp(n, -1);
-        cout << solve(0, n, a, dp, pos) << "\n";
+       
+        vector<int> freq(maxC + 1, 0);
+        for (int v : c) freq[v]++;
+
+
+        vector<int> pref(maxC + 1, 0);
+        for (int i = 1; i <= maxC; ++i) pref[i] = pref[i-1] + freq[i];
+
+        ll best = NEG_INF;
+
+   
+        for (int x = 2; x <= maxC; ++x) {
+            ll sumNew = 0;      
+            ll reused = 0;       
+            int maxK = (maxC + x - 1) / x; 
+
+            for (int k = 1; k <= maxK; ++k) {
+                int L = (k - 1) * x + 1;
+                int R = min(k * x, maxC);
+                if (L > R) continue;
+                int need = pref[R] - pref[L - 1];
+                if (need == 0) continue;
+                sumNew += 1LL * k * need;
+                if (k <= maxC) {
+                    reused += min((ll)freq[k], (ll)need);
+                }
+            }
+
+            ll printed = (ll)n - reused;
+            ll income = sumNew - y * printed;
+            if (income > best) best = income;
+        }
+
+        
+        if (maxC < 2) {
+         
+            ll sumNew = 0, reused = 0;
+            for (int i = 0; i < n; ++i) {
+                int np = (c[i] + 1) / 2;
+                sumNew += np;
+            }
+        
+            unordered_map<int,int> need;
+            for (int i = 0; i < n; ++i) ++need[(c[i] + 1) / 2];
+            for (auto &kv : need) {
+                int val = kv.first;
+                int cnt = kv.second;
+                if (val <= maxC) reused += min((ll)freq[val], (ll)cnt);
+            }
+            ll printed = (ll)n - reused;
+            ll income = sumNew - y * printed;
+            best = max(best, income);
+        }
+
+        cout << best << "\n";
     }
+    return 0;
 }

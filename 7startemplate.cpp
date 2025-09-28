@@ -1,15 +1,10 @@
-
 #include <bits/stdc++.h>
-using namespace std ;
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
+using namespace std 
 #define ll long long 
 #define ull unsigned long long
 #define lld long double
 #define pii pair<int,int>
 #define pll pair<ll,ll>
- 
 #define fastio() ios_base::sync_with_stdio(false);cin.tie(NULL);
 #define vi vector<int>
 #define nline "\n"
@@ -35,14 +30,11 @@ using namespace __gnu_pbds;
 #define set_bits __builtin_popcountll
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
- 
-#define print(k) {for(auto v : k){cout << v << " ";} cout << endl;}
-
+#define print(k) {for(auto v : k){cout << v <<" ";} cout << endl;}
 #define fi first
 #define se second
 #define pb push_back
 #define mp make_pair
-
 #define yes cout << "Yes" << endl;
 #define no cout << "No" << endl;
 ll mod = 998244353;
@@ -52,11 +44,27 @@ ll ifact[1000005];
 #define maxsz 200005
 #define logmax 18
 void solve(){
+    int k;
+    ll x;
+    cin>>k>>x;
+    while(k--){
+            if(x%2==0){
+                x=x/2;
+
+    }
+    else{
+        x=x*3+1;
+    }
+
+    }
+cout<<x<<endl;
+    
 
 }
 int main(){
-
 int t;
+cin>>t;
+
 while(t--){
 
 

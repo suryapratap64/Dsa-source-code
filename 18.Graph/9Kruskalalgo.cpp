@@ -8,7 +8,13 @@ void makeSet(vector<int>& parent, vector<int>& rank, int n) {
         rank[i] = 0;   // Rank (height of tree) starts as 0
     }
 }
+// ⚡ Tarjan’s Algorithm Idea (used in your code)
 
+// We use DFS with discovery time & low time:
+
+// disc[node]: The time when the node was discovered (DFS entry time).
+
+// low[node]: The earliest discovered node reachable from this node (via back-edges).
 // Function to find the parent (or representative) of a set using Path Compression
 int findParent(vector<int>& parent, int node) {
     if (parent[node] == node) {
@@ -47,7 +53,7 @@ int minimumSpanningTree(vector<vector<int>>& edges, int n) {
 
     vector<int> parent(n); // Parent array for DSU
     vector<int> rank(n);   // Rank array for DSU
-
+// Disjoint Set Union (Union-Find)
     makeSet(parent, rank, n); // Initialize DSU
 
     int minWeight = 0; // Variable to store total MST weight
