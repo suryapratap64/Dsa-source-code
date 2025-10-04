@@ -8,6 +8,8 @@ void printarray(int arr[],int n){
     }
 
 }
+  vector<int> nums(n);
+  iota(nums.begin(), nums.end(), 1); // fill [1, 2, 3, ..., n]
 int main(){
      
     
