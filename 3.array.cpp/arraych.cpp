@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int main(){
 
@@ -13,3 +13,9 @@ cout<<arr[i]<<" ";
 }
 
 }
+//  merging of two vector 
+vector<int> a = {1, 2, 3};
+vector<int> b = {4, 5, 6};
+
+vector<int> merged = a;
+merged.insert(merged.end(), b.begin(), b.end());

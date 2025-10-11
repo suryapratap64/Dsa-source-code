@@ -10,10 +10,12 @@ int main()
     vector<int> v;
     cout << "size  " << v.capacity() << endl;
 
+  // ek vector me ek direct vector push kar sakte hai;
+    ans.push_back({nums[i], nums[left], nums[right]}); // 15
+
+
     v.push_back(1);
     cout << "size of vector   " << v.capacity() << endl;
-    // ek vector me ek direct vector push kar sakte hai;
-   // ans.push_back({nums[i], nums[left], nums[right]}); // 15
     v.push_back(8);
     v.push_back(7);
     v.push_back(4);
@@ -22,7 +24,7 @@ int main()
     // abhishek shortcut
     v.insert(v.begin() + 2, 5);
     // checking for sorting function
-    //! is_sorted(box.begin(),box.end());
+     is_sorted(box.begin(),box.end());
     v.push_back(3);
     v.push_back(7);
     cout << "size of vector   " << v.capacity() << v.size() << endl;
@@ -37,17 +39,19 @@ int main()
     cout << endl;
     v.pop_back();
     // deleting lement ned of  the array
+     v.erase(find(v.begin(),v.end(),mine)); 
 
+//  =>code for finding an elemt and delete this from a array selected a individual element]
 
     //delete all chars element
 
     chars.clear(); // Clear the original chars array
     for (auto i : v)
     cout << i << " ";
+
+    //means that we are creating a copy of the earring vector into a new vector called mirrored
     vector<pair<int, int>> mirrored = earring;
-     means that we are creating a copy of the earring vector into a new vector called mirrored
-
-
+    
     // printing for arrray 5 is the size and 9 is the number which is print;
     vector<int> a(5, 9);
     for (int i : a)
@@ -64,7 +68,7 @@ int main()
     {
         std::vector<int> vec = {1, 2, 3, 4, 5};
 
-// simle erase function 
+// simple erase function 
  nums.erase(nums.begin() + i);
         // Delete the element with value 3
         vec.erase(std::remove(vec.begin(), vec.end(), 3), vec.end());
@@ -124,4 +128,10 @@ int main()
          vector<vector<int>> prevRows = generate(numRows - 1);
    //sum of element in vector for n element 
    int sum = accumulate(v.begin(), v.begin() + min(3, n), 0); // Sum top 3 or all if n < 3
+   
 }
+
+//enter the vale for 1 to n value in vector
+
+vector<int> v(n);
+iota(v.begin(), v.end(), 1); // Fill vector with numbers 1 to n

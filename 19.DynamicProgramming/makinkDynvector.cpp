@@ -8,7 +8,7 @@ WARNING: This will not be a tabulated, perfectly optimized DP solution. We have 
 This post will walk you through the THINKING process behind Dynamic Programming so that you can solve these questions on your own.
 
 Category
-Most dynamic programming questions can be boiled down to a few categories. It's important to recognize the category because it allows us to FRAME a new question into something we already know. Frame means use the framework, not copy an approach from another problem into the current problem. You must understand that every DP problem is different.
+Most dynamic programming questions can be boiled down to a few categories. Its important to recognize the category because it allows us to FRAME a new question into something we already know. Frame means use the framework, not copy an approach from another problem into the current problem. You must understand that every DP problem is different.
 
 Question: Identify this problem as one of the categories below before continuing.
 
@@ -89,4 +89,4 @@ If you've thought through all the steps and understand the problem, it's trivial
      
      return positive + negative
 Optimize
-Once we introduce memoization, we will only solve each subproblem ONCE. We can remove recursion altogether and avoid the overhead and potential of a stack overflow by introducing tabulation. It's important to note that the top down recursive and bottom up tabulation methods perform the EXACT same amount of work. The only different is memory. If they peform the exact same amount of work, the conversion just requires us to specify the order in which problems should be solved. This post is really long now so I won't cover these steps here, possibly in a future post.
+Once we introduce memoization, we will only solve each subproblem ONCE. We can remove recursion altogether and avoid the overhead and potential of a stack overflow by introducing tabulation. Its important to note that the top down recursive and bottom up tabulation methods perform the EXACT same amount of work. The only different is memory. If they peform the exact same amount of work, the conversion just requires us to specify the order in which problems should be solved. This post is really long now so I wont cover these steps here, possibly in a future post.

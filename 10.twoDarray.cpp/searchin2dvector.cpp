@@ -6,8 +6,8 @@ public:
 int s=0;
 int row =matrix.size();
 int col=matrix[0].size();
-
-
+//this main logic in this code
+//matrix[mid/col][mid%col]
 
 int e=row*col-1;
     while(s<=e){

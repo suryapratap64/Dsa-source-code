@@ -2,7 +2,7 @@
 ans is presumably a variable holding an integer value. It starts at 0 and is progressively built as the code processes each character of the string s.
 s[i] refers to the i-th character of the string s, and the expression s[i] - '0' converts the character at index i into its corresponding integer value.
 Breakdown of the line:
-ans * 10: Shifts the current value of ans one decimal place to the left, making room for the next digit.
+// ans * 10: Shifts the current value of ans one decimal place to the left, making room for the next digit.
 (s[i] - '0'): Converts the character at position i of the string s into its numeric equivalent. For example, '3' - '0' gives the integer 3.
 ans = ans * 10 + (s[i] - '0'): The new digit from s[i] is added to the end of the current value of ans, essentially constructing the integer.
 Example:

@@ -1,2 +1,67 @@
 ->maximise the use of recursion in recursion you to choose first base case ,then all case recursion already solve ksr dega.
 ->index storing concept is most inmporttant in the array;
+
+(n & (n - 1)) == 0 =>then it power of two;
+
+(labs)  => The function labs stands for "long absolute". It's a standard C function that computes the absolute value of a long int.
+long long dvd = labs(dividend), dvs = labs(divisor), result = 0;
+
+[count]=>> that are to finding elements in the set, if present return 1,and if not return 0;
+
+==>Total subarrays in array size n= (n⋅(n+1))/2;
+
+==>for specific greater than k size of subarrays how many array=>((n−k)(n−k+1))/2;
+
+==>// Function to compute number of subarrays of size >= k
+
+ll countSubarrays(int len, int k) {
+
+    if (len < k) return 0;
+
+    ll total = len - k + 1;
+
+    return (total * (total + 1)) / 2;
+
+}
+
+// using ll = long long;=>>>>type defining;
+
+
+// when we taek length variable then initialise with the value 1;
+​
+//gcd function in c++===>ans=__gcd(ans,abs(a[i]-i));
+ ===>>remove duplicaes elements
+// a.erase(unique(a.begin(), a.end()), a.end()); // remove duplicates, because multiple bars in same house are distinct
+
+///🔍 Key XOR Properties:
+XOR is associative and commutative.
+
+𝑎
+⊕
+𝑎
+=
+0
+a⊕a=0, and 
+𝑎
+⊕
+0
+=
+𝑎
+a⊕0=a.
+
+XOR can be reversed: if 
+𝑎
+⊕
+𝑏
+=
+𝑥
+a⊕b=x, then 
+𝑏
+=
+𝑎
+⊕
+𝑥
+b=a⊕x.
+
+
+    

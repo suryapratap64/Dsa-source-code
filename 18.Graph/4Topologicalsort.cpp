@@ -6,6 +6,8 @@
 using namespace std;
 
 // Helper function for DFS and topological sort
+//what means of topological sort
+//topological sort is a linear ordering of vertices such that for every directed edge u->v, vertex u comes before v in the ordering
 void toposort(int node, unordered_map<int, bool> &visited, stack<int> &s, unordered_map<int, list<int>> &adj) {
     visited[node] = true;
 

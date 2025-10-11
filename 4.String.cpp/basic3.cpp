@@ -3,13 +3,15 @@
 //kisi bhi character ko integer value me convert kare
 s[i]-'a' converts the character at index i of string s into an integer that represents the position of that character in the alphabet.
 //kisi vlaue ko convert kare string me on loop
-You need to convert it to the actual number by subtracting '0' from it: int key=digits[i] - '0';
+You need to convert int to the actual number by subtracting '0' from it: int key=digits[i] - '0';
 
 .substr function=> for finding the sub part of the string ;
 string s = "hello world";
 string sub = s.substr(6, 5);  // Extracts "world"
 
 
+//count nuber of ones present inn the string
+int ones1 = count(s1.begin(), s1.end(), '1');
 
 
 
@@ -54,3 +56,9 @@ int main() {
 
     return 0;
 }
+
+//substring finding in string
+bool isSubstring(string mainStr, string subStr) {
+    return mainStr.find(subStr) != string::npos;
+}
+

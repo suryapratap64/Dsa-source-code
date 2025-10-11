@@ -1,46 +1,51 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 /*Maps are associative containers that store elements in a mapped fashion. Each element has a key value and a mapped value. No two mapped values can have the same key values.*/
-int main (){
-    map<int,string> m;
-    //creating a two map at once
-      unordered_map<char,int>map1,map2;
-    
-    m[1]="babbr";
-    m[2]="surya";
-    m[3]="pratap";
+int main()
+{
+    map<int, string> m;
+    // creating a two map at once
+    unordered_map<char, int> map1, map2;
 
-    for(auto i:m){
-        cout<<i.first<<" "<<i.second;
-        m.insert({5,"bheem"});
-        cout<<"finding -13"<<m.count(-3);
+    m[1] = "babbr";
+    m[2] = "surya";
+    m[3] = "pratap";
+
+    for (auto i : m)
+    {
+        cout << i.first << " " << i.second;
+        m.insert({5, "bheem"});
+        cout << "finding -13" << m.count(-3);
         m.erase(3);
 
-        cout<<"after erase";
-        for (auto i:m){
-            cout<<i.first<<i.second;
-
+        cout << "after erase";
+        for (auto i : m)
+        {
+            cout << i.first << i.second;
         }
-        auto it=m.find(5);
-        for(auto i=it;i!=m.end();i++){
-            cout<<(*i).first;
-            }
-
-
+        auto it = m.find(5);
+        for (auto i = it; i != m.end(); i++)
+        {
+            cout << (*i).first;
+        }
     }
-    //clear bassic concepts of map
-     map<string, int> mp;
-        string s = "";
-string paragraph;
-        for (int i = 0; i < paragraph.size(); i++) {
-            if ((paragraph[i] >= 'a' && paragraph[i] <= 'z') || (paragraph[i] >= 'A' && paragraph[i] <= 'Z')) {
-                s.push_back(tolower(paragraph[i]));
-            } else if (!s.empty()) {
-                mp[s]++;
-                s = "";
-            }
+    // clear bassic concepts of map
+    map<string, int> mp;
+    string s = "";
+    string paragraph;
+    for (int i = 0; i < paragraph.size(); i++)
+    {
+        if ((paragraph[i] >= 'a' && paragraph[i] <= 'z') || (paragraph[i] >= 'A' && paragraph[i] <= 'Z'))
+        {
+            s.push_back(tolower(paragraph[i]));
         }
-     map<string, int> mp;
+        else if (!s.empty())
+        {
+            mp[s]++;
+            s = "";
+        }
+    }
+    map<string, int> mp;
 
     // Insert some values into the map
     mp["one"] = 1;
@@ -50,15 +55,16 @@ string paragraph;
     // Get an iterator pointing to the first element in the
     // map
     map<string, int>::iterator it = mp.begin();
-   //  auto it = mp.find(key);
+    //  auto it = mp.find(key);
 
     // Iterate through the map and print the elements
-    while (it != mp.end()) {
+    while (it != mp.end())
+    {
         cout << "Key: " << it->first
              << ", Value: " << it->second << endl;
         ++it;
     }
-     // empty map container
+    // empty map container
     map<int, int> gquiz1;
 
     // insert elements in random order
@@ -76,7 +82,8 @@ string paragraph;
     map<int, int>::iterator itr;
     cout << "\nThe map gquiz1 is : \n";
     cout << "\tKEY\tELEMENT\n";
-    for (itr = gquiz1.begin(); itr != gquiz1.end(); ++itr) {
+    for (itr = gquiz1.begin(); itr != gquiz1.end(); ++itr)
+    {
         cout << '\t' << itr->first << '\t' << itr->second
              << '\n';
     }
@@ -89,7 +96,8 @@ string paragraph;
     cout << "\nThe map gquiz2 after"
          << " assign from gquiz1 is : \n";
     cout << "\tKEY\tELEMENT\n";
-    for (itr = gquiz2.begin(); itr != gquiz2.end(); ++itr) {
+    for (itr = gquiz2.begin(); itr != gquiz2.end(); ++itr)
+    {
         cout << '\t' << itr->first << '\t' << itr->second
              << '\n';
     }
@@ -101,7 +109,8 @@ string paragraph;
             " elements less than key=3 : \n";
     cout << "\tKEY\tELEMENT\n";
     gquiz2.erase(gquiz2.begin(), gquiz2.find(3));
-    for (itr = gquiz2.begin(); itr != gquiz2.end(); ++itr) {
+    for (itr = gquiz2.begin(); itr != gquiz2.end(); ++itr)
+    {
         cout << '\t' << itr->first << '\t' << itr->second
              << '\n';
     }
@@ -112,7 +121,8 @@ string paragraph;
     cout << "\ngquiz2.erase(4) : ";
     cout << num << " removed \n";
     cout << "\tKEY\tELEMENT\n";
-    for (itr = gquiz2.begin(); itr != gquiz2.end(); ++itr) {
+    for (itr = gquiz2.begin(); itr != gquiz2.end(); ++itr)
+    {
         cout << '\t' << itr->first << '\t' << itr->second
              << '\n';
     }
@@ -134,40 +144,42 @@ string paragraph;
     return 0;
 
     // how so push or increase element in map
-    vector<int> majorityElement(vector<int>& nums) {
+    vector<int> majorityElement(vector<int> & nums)
+    {
         // Create a frequency map to store the count of each element
         unordered_map<int, int> elementCountMap;
-        
+
         // Iterate through the input array to count element occurrences
-        for(int i = 0; i < nums.size(); i++) {
+        for (int i = 0; i < nums.size(); i++)
+        {
             elementCountMap[nums[i]]++;
         }
     }
-    //searching in map
+    // searching in map
     myMap["apple"] = 5;
     myMap["banana"] = 3;
     myMap["cherry"] = 7;
 
     // Search for a key
     std::string key = "banana";
-    if (myMap.find(key) != myMap.end()) {
+    if (myMap.find(key) != myMap.end())
+    {
         // Key found, access its value
         std::cout << key << " has a value of " << myMap[key] << std::endl;
-    } else {
+    }
+    else
+    {
         // Key not found
         std::cout << key << " not found in the map." << std::endl;
     }
 
-    //increasing the frequency of map by auto loop
+    // increasing the frequency of map by auto loop
     unordered_map<int, int> mp;
-    for (int i : nums) {
-    mp[i]++;  // 'i' is the element from the 'nums' vector
+    for (int i : nums)
+    {
+        mp[i]++; // 'i' is the element from the 'nums' vector
 
-    //but in for loop we use the 
-    mp[nums[i]]++;
-
-}
-
-
-
+        // but in for loop we use the
+        mp[nums[i]]++;
+    }
 }
