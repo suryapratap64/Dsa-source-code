@@ -27,3 +27,4 @@ cout<<"stack is not empty"<<endl;
 // }
 // cout<<endl;
 //A monotonic stack is a special data structure used in algorithmic problem-solving. Monotonic Stack maintaining elements in either increasing or decreasing order. It is commonly used to efficiently solve problems such as finding the next greater or smaller element in an array etc.
+//monotonic stack at time of insertion  means in sorted order;

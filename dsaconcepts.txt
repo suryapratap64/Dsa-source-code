@@ -1,5 +1,6 @@
 ->maximise the use of recursion in recursion you to choose first base case ,then all case recursion already solve ksr dega.
 ->index storing concept is most inmporttant in the array;
+<<<<<<< HEAD
 
 (n & (n - 1)) == 0 =>then it power of two;
 
@@ -65,3 +66,6 @@ b=a⊕x.
 
 
     
+=======
+zz
+>>>>>>> 7cf522b4544f2c93354830b633995a8be61f65e4

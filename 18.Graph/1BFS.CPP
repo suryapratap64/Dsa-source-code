@@ -4,6 +4,23 @@
 #include <queue>
 #include <vector>
 using namespace std;
+//Direction in matrix
+int drow[] = {-1, 0, +1, 0};
+int dcol[] = {0, +1, 0, -1};
+
+//Meaning of these arrays
+//They represent up, right, down, left movements:
+
+Index	drow	dcol	Move
+0	     -1	      0	    Up
+1	      0	     +1  	Right
+2	      +1	  0	    Down
+3	      0	     -1	    Left
+
+Extending to 8 directions (diagonal allowed)
+int drow[] = {-1,-1,-1, 0, 0,+1,+1,+1};
+int dcol[] = {-1, 0,+1,-1,+1,-1, 0,+1};
+
 
 // Function to prepare adjacency list from edges
 void prepareAdjList(unordered_map<int, set<int>> &adjlist, vector<pair<int, int>> &edges) {
@@ -24,6 +41,7 @@ void bfs(unordered_map<int, set<int>> &adjlist, unordered_map<int, bool> &visite
     while (!q.empty()) {
         int frontNode = q.front();
         q.pop();
+        //drop at first element
 
         // Store the front node in the answer
         ans.push_back(frontNode);

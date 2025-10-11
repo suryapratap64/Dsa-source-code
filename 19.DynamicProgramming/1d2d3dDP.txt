@@ -1,0 +1,53 @@
+Got it 👍 Let’s break this into very simple English so you can easily understand when to use 1D DP, 2D DP, and 3D DP.
+
+🔹 1D DP (One-Dimensional DP)
+
+👉 Used when the answer depends only on one changing value (like index, capacity, or length).
+
+Example problems:
+
+Fibonacci series → dp[n] = dp[n-1] + dp[n-2]
+
+Climbing stairs → ways to reach step i depends only on previous steps.
+
+Knapsack (optimized) → sometimes we compress 2D into 1D if only the capacity matters.
+
+✅ Rule: If you can define your state with just one variable, use 1D DP.
+
+🔹 2D DP (Two-Dimensional DP)
+
+👉 Used when the answer depends on two values (like index + capacity, or index1 + index2).
+
+Example problems:
+
+0/1 Knapsack → dp[i][w] = best using first i items with weight w
+
+Longest Common Subsequence (LCS) → dp[i][j] = LCS length between first i chars of A and first j chars of B
+
+Grid paths → dp[r][c] = ways to reach cell (r, c)
+
+✅ Rule: If your state needs two variables to describe it, use 2D DP.
+
+🔹 3D DP (Three-Dimensional DP)
+
+👉 Used when the answer depends on three things at once (like index + capacity + some extra condition).
+
+Example problems:
+
+Knapsack with an extra constraint (e.g., item count limit) → dp[i][w][k]
+
+Edit distance with extra condition
+
+DP on subsequences with multiple constraints
+
+✅ Rule: If your problem needs three independent variables to describe the state, use 3D DP.
+
+⚡ Shortcut Memory:
+
+1D DP → One thing changes (like steps, length, money).
+
+2D DP → Two things change (like two strings, or index + weight).
+
+3D DP → Three things change (like index + weight + number of items).
+
+Do you want me to make a visual chart with examples (like table form) so you can quickly see when to use 1D, 2D, or 3D?

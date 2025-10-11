@@ -8,6 +8,12 @@ You need to convert int to the actual number by subtracting '0' from it: int key
 .substr function=> for finding the sub part of the string ;
 string s = "hello world";
 string sub = s.substr(6, 5);  // Extracts "world"
+//s.substr(index,length);
+
+for converting intoloer case;
+=>result.push_back(tolower(s[index]));
+for upper case;
+==>toupper(s[index]);
 
 
 //count nuber of ones present inn the string
@@ -20,7 +26,7 @@ int ones1 = count(s1.begin(), s1.end(), '1');
 //string adding methods
  t[j]=s[i]; //by equal methods add the string;
 
- // string initialization by this method;
+// string initialization by this method;
 string t(n, ' ');//n=size of string;
 /string t(n + m, ' ');
 // What it does:

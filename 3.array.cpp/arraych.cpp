@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
+//standard direction array for the any concept in 2darray
+int dxdy[][2]={{1,0},{0,1},{-1,0},{0,-1}};
 
     //this is another mehod to initialise the array
     //  arr = new int[k];

@@ -4,7 +4,7 @@ using namespace std;
 vector<pair<pair<int, int>, int>> calculatePrimsMST(int n, int m, vector<pair<pair<int, int>, int>> edges) {
     // Adjacency list representation of graph
     vector<vector<pair<int, int>>> adj(n + 1);  // 1-based indexing
-
+// Disjoint Set Union (Union-Find)
     // Build adjacency list
     for (auto &edge : edges) {
         int u = edge.first.first;

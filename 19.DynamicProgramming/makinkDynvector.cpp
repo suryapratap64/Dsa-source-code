@@ -89,4 +89,45 @@ If you've thought through all the steps and understand the problem, it's trivial
      
      return positive + negative
 Optimize
+<<<<<<< HEAD
 Once we introduce memoization, we will only solve each subproblem ONCE. We can remove recursion altogether and avoid the overhead and potential of a stack overflow by introducing tabulation. Its important to note that the top down recursive and bottom up tabulation methods perform the EXACT same amount of work. The only different is memory. If they peform the exact same amount of work, the conversion just requires us to specify the order in which problems should be solved. This post is really long now so I wont cover these steps here, possibly in a future post.
+=======
+Once we introduce memoization, we will only solve each subproblem ONCE. We can remove recursion altogether and avoid the overhead and potential of a stack overflow by introducing tabulation. It's important to note that the top down recursive and bottom up tabulation methods perform the EXACT same amount of work. The only different is memory. If they peform the exact same amount of work, the conversion just requires us to specify the order in which problems should be solved. This post is really long now so I won't cover these steps here, possibly in a future post.
+//indexing in dp
+// 🔹 0-Based Indexing
+
+// Default in most programming languages (C++, Java, Python).
+
+// Useful when the input array/string is already 0-based.
+
+// You often see this in subarray, substring, LIS, knapsack, matrix DP problems.
+
+// Example:
+
+// for (int i = 0; i < n; i++) {  // array index starts from 0
+//     dp[i] = ...
+// }
+
+// 🔹 1-Based Indexing
+
+// Often used when you want simpler transitions or to avoid edge-case checks.
+
+// Common in:
+
+// Knapsack problems (dp[i][w] → considering first i items).
+
+// LCS / Edit Distance (dp[i][j] → first i characters of string A, first j of string B).
+
+// Prefix sums / cumulative DP (because dp[0] can naturally mean “empty set”).
+
+// Example (LCS):
+
+// for (int i = 1; i <= n; i++) {
+//     for (int j = 1; j <= m; j++) {
+//         if (a[i-1] == b[j-1])
+//             dp[i][j] = 1 + dp[i-1][j-1];
+//         else
+//             dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+//     }
+// }
+>>>>>>> 7cf522b4544f2c93354830b633995a8be61f65e4

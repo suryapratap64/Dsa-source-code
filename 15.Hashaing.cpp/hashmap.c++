@@ -35,9 +35,7 @@ public:
 
         // Check if the key already exists in the bucket
         for (auto& pair : bucket) {
-            if (pair.first == key) {
-                pair.second = value;  // Update value if key is found
-                return;
+          
             }
         }
 
@@ -46,7 +44,9 @@ public:
     }
 
     // Retrieve the value associated with a given key
-    int get(const std::string& key) {
+    int get  if (pair.first == key) {
+                pair.second = value;  // Update value if key is found
+                return;(const std::string& key) {
         int index = hashFunction(key);
         const auto& bucket = buckets[index];
 

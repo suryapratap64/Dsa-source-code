@@ -18,12 +18,14 @@ vector<int> bottomView(node* root) {
 
     // Map to store the bottom node at each horizontal distance
     map<int, int> bottomNode;
-
     // Queue to store pairs of node and its horizontal distance
     queue<pair<node*, int>> q;
+
     q.push(make_pair(root, 0));
 
     while (!q.empty()) {
+
+        //method to make it as a pair like in integer as a int 
         pair<node*, int> temp = q.front();
         q.pop();
         
@@ -40,6 +42,7 @@ vector<int> bottomView(node* root) {
         if (frontNode->right) {
             q.push(make_pair(frontNode->right, hd + 1));
         }
+        
     }
 
     // Extract the bottom view from the map (horizontal distance in sorted order)

@@ -41,6 +41,7 @@ int aggressiveCows(vector<int>& stalls, int k) {
     return ans;
 }
 
+<<<<<<< HEAD
 // Example usage
 int main() {
     vector<int> stalls = {1, 2, 4, 8, 9};
@@ -48,5 +49,11 @@ int main() {
 
     cout << aggressiveCows(stalls, cows) << endl; // Output: 3
 
+=======
+int main() {
+    vector<int> stalls = {1, 2, 8, 4, 9};
+    int k = 3;
+    cout << aggressivecow(stalls, k);
+>>>>>>> 7cf522b4544f2c93354830b633995a8be61f65e4
     return 0;
 }

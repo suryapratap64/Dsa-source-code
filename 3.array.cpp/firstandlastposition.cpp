@@ -1,41 +1,59 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int  firstocc(int array[], int n)
-{
-
+// Function to find first occurrence
+int firstOcc(int arr[], int n, int key) {
     int s = 0, e = n - 1;
-    int key;
-
-    cin >> key;
-    int mid = s + (e - s) / 2;
     int ans = -1;
-    while (s <= e)
-    {
-        if (array[mid]== key)
-        {
-            ans = mid;
-            
-            e = mid - 1;
+    while (s <= e) {
+        int mid = s + (e - s) / 2;
+        if (arr[mid] == key) {
+            ans = mid;      // possible answer
+            e = mid - 1;    // look in left half
         }
-        else if (key > array[mid])
-        {
+        else if (key > arr[mid]) {
             s = mid + 1;
         }
-        else if (key < array[mid])
-        {
+        else {
             e = mid - 1;
         }
-        mid = s + (e - s) / 2;
     }
     return ans;
- 
 }
-int main()
-{
-    int array[7] = {5, 4, 4, 4, 42, 4, 9};
-   
-    cout << firstocc(array,7) << endl;
+
+// Function to find last occurrence
+int lastOcc(int arr[], int n, int key) {
+    int s = 0, e = n - 1;
+    int ans = -1;
+    while (s <= e) {
+        int mid = s + (e - s) / 2;
+        if (arr[mid] == key) {
+            ans = mid;      // possible answer
+            s = mid + 1;    // look in right half
+        }
+        else if (key > arr[mid]) {
+            s = mid + 1;
+        }
+        else {
+            e = mid - 1;
+        }
+    }
+    return ans;
+}
+
+int main() {
+    int array[] = {4, 4, 4, 5, 9, 42, 42}; // must be sorted for binary search
+    int n = sizeof(array) / sizeof(array[0]);
+
+    int key;
+    cout << "Enter key: ";
+    cin >> key;
+
+    int first = firstOcc(array, n, key);
+    int last = lastOcc(array, n, key);
+
+    cout << "First occurrence index: " << first << endl;
+    cout << "Last occurrence index: " << last << endl;
 
     return 0;
 }

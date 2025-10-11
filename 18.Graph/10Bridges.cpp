@@ -1,8 +1,18 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+// 🔑 What are Bridges in a Graph?
 
+// A bridge (also called a cut-edge) in an undirected graph is an edge that, if removed, increases the number of connected components of the graph.
+// In other words:
+// A bridge is a "critical connection."
+// Removing it disconnects some part of the graph.
 // Depth First Search function to find bridges using Tarjan's Algorithm
+// ⚡ Tarjan’s Algorithm Idea (used in your code)
+// We use DFS with discovery time & low time:
+// disc[node]: The time when the node was discovered (DFS entry time).
+// low[node]: The earliest discovered node reachable from this node (via back-edges).
+
 void dfs(int node, int parent, int &timer, vector<int>& disc, vector<int>& low, 
          vector<vector<int>>& result, unordered_map<int, list<int>>& adj, 
          unordered_map<int, bool>& vis) {

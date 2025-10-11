@@ -138,8 +138,6 @@ node* bulildfromlevelorder(node* root){
         if(leftdata!=-1){
             temp->left=new node(leftdata);
             q.push(temp->left);
-
-
         }
         cout<<"enter thhe node for the right node"<<temp->data<<endl;
         int rightdata;

@@ -1,0 +1,37 @@
+//pip for python module  installation in laptop
+//django is framework for web desigining in python django compute wec application
+//for enviroent=>pip install virtualenvwrapper-win
+//for install django=> pip install django   
+//for creating in app=>python manage.py startapp myapp
+//for create myproject and go admin pannel =>django-admin startproject myproject
+
+
+//========================
+
+for creating any new python app
+python -m venv venv
+.\venv\Scripts\activate
+pip install django
+django-admin startproject myproject
+cd myproject
+python manage.py startapp myapp
+python manage.py runserver
+ ==>>uvicorn main:app --reload
+
+
+===============================
+for deactivate admin pannel => deactivate
+
+//select enviroment ineterpeter in command terminnal of vd code;
+for running server 
+ ==>>uvicorn main:app --reload
+
+ ==>>python manage.py  runserver
+
+//for changing python enteerpeter 
+Open the Command Palette
+Press Ctrl + Shift + P (or Cmd + Shift + P on Mac).
+Type: Python: Select Interpreter
+
+/////////
+

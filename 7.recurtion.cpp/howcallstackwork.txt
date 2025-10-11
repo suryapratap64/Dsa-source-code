@@ -1,0 +1,73 @@
+🔹 How recursion executes (line by line)
+
+Take the recursive code:
+
+int solve(int i, int j, vector<vector<int>>& grid) {
+    if(i >= grid.size() || j >= grid[0].size()) return INT_MAX; // base case
+    if(i == grid.size()-1 && j == grid[0].size()-1) return grid[i][j]; // destination
+
+    int down = solve(i+1, j, grid);   // recursive call down
+    int right = solve(i, j+1, grid);  // recursive call right
+
+    return grid[i][j] + min(down, right);  // combine
+}
+
+Step 1: Enter a call (i,j)
+
+First line: check base cases.
+
+If neither base case hits → proceed to recursive calls.
+
+Step 2: Recursive call down
+
+solve(i+1,j) is called.
+
+This call itself pauses the current call and goes deeper.
+
+Every new call follows the same steps: check base cases → make down/right calls → combine.
+
+Step 3: Return from down
+
+Only after all deeper down calls return, we get the value down.
+
+Then we call right recursion: solve(i,j+1).
+
+Step 4: Return from right
+
+After all deeper right calls return, we get right.
+
+Step 5: Combine at current level
+return grid[i][j] + min(down, right);
+
+
+This is executed last in this function call.
+
+The result is sent back to the parent function in the recursion tree.
+
+🔹 Important Points
+
+Every call pauses at recursive calls until those calls complete.
+
+Base cases stop further recursion.
+
+After both down and right are computed, the current node calculates the sum and returns it.
+
+Without DP, cells can be recomputed multiple times if reached from different paths.
+
+🔹 Analogy
+
+Think of recursion like stack of plates:
+
+You put the first plate (0,0) on stack.
+
+Call down → put (1,0) on stack.
+
+Call down again → put (2,0) on stack.
+
+Hit base case → pop (2,0) → compute grid[2][0]+min(down,right) → return value to (1,0).
+
+Then call right from (1,0) → do same until value returned.
+
+Finally, compute (0,0) using returned down and right.
+
+If you want, I can draw a full diagram of recursion execution as a stack, showing exact order each line is executed — it makes this “down → right → combine” process crystal clear.

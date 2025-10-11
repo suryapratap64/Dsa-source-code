@@ -64,5 +64,27 @@ int main() {
     else
         cout << "Allocation not possible" << endl;
 
+    int low = *max_element(pages.begin(), pages.end());
+    int high = accumulate(pages.begin(), pages.end(), 0);
+    int ans = high;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (isPossible(pages, m, mid)) {
+            ans = mid;
+            high = mid - 1; // try smaller max
+        } else {
+            low = mid + 1;  // try larger max
+        }
+    }
+    return ans;
+}
+
+int main() {
+    vector<int> pages = {12, 34, 67, 90};
+    int m = 2;
+    cout << "Minimum possible maximum pages: "
+         << bookAllocation(pages, m) << endl;
     return 0;
 }

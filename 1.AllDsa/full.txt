@@ -1,0 +1,37 @@
+1.Baics Mathmetcs/Array/2dArray/String/STL/binaysearch
+2.REcursion/backracking/Dynamicprogramming
+3.LinkList/stack/queue/priority_queue
+4.Tree/binaysearchTree
+5.Graph
+
+DSA Topics
+│
+├── 1. Basics
+│   ├── Mathematics
+│   ├── Array
+│   ├── 2D Array
+│   ├── String
+│   ├── STL (Standard Template Library)
+│   ├── Binary Search
+│   ├── Sliding Window
+│   ├── Two pointer
+│   └── Heap/priority Queue
+│ 
+│ 
+├── 2. Recursion & Advanced
+│   ├── Recursion
+│   ├── Backtracking
+│   ├── Dynamic Programming
+│   └── Greedy Algorithms
+├── 3. Linear Data Structures
+│   ├── Linked List
+│   ├── Stack
+│   └── Queue
+│   
+│
+├── 4. Trees
+│   ├── Tree (General)
+│   └── Binary Search Tree (BST)
+│
+└── 5. Graphs
+    └── Graph Theory (Representation + Algorithms)
