@@ -1,0 +1,134 @@
+
+============================
+BITWISE OPERATORS – PRO CODER CHEAT SHEET
+============================
+
+1. BASIC OPERATORS
+------------------
+&  -> Bitwise AND
+|  -> Bitwise OR
+^  -> Bitwise XOR
+~  -> Bitwise NOT (1's complement)
+<< -> Left Shift (multiply by 2^k)
+>> -> Right Shift (divide by 2^k)
+
+Examples:
+5 & 3 = 1
+5 | 3 = 7
+5 ^ 3 = 6
+~5 = -6
+5 << 1 = 10
+5 >> 1 = 2
+
+------------------------------------------------------
+2. AND ( & )
+------------------------------------------------------
+- Used to mask bits or extract certain bits.
+- x & 1          -> Check if x is odd.
+- x & (1 << k)   -> Check if k-th bit is set.
+
+Properties:
+x & x = x
+x & 0 = 0
+x & 1 = x (for binary bits)
+Commutative, Associative
+
+------------------------------------------------------
+3. OR ( | )
+------------------------------------------------------
+- Used to set bits.
+- x | (1 << k)   -> Set k-th bit to 1.
+
+Properties:
+x | x = x
+x | 0 = x
+x | 1 = 1
+Commutative, Associative
+
+------------------------------------------------------
+4. XOR ( ^ )
+------------------------------------------------------
+- Used to toggle bits or find unique values.
+- a ^ 0 = a
+- a ^ a = 0
+- a ^ b ^ a = b
+
+Uses:
+- Swap without temp: a ^= b; b ^= a; a ^= b;
+- Find single number: xor all numbers.
+- Toggle bit: x ^= (1 << k)
+
+Properties:
+x ^ 0 = x
+x ^ x = 0
+Commutative, Associative
+
+------------------------------------------------------
+5. NOT ( ~ )
+------------------------------------------------------
+- Inverts all bits.
+Formula: ~x = -x - 1
+
+------------------------------------------------------
+6. SHIFT OPERATORS
+------------------------------------------------------
+Left Shift: x << k = x * (2^k)
+Right Shift: x >> k = x / (2^k)
+
+Note: For unsigned types, right shift fills 0.
+For signed, keeps sign bit (arithmetic shift).
+
+------------------------------------------------------
+7. BIT MANIPULATION TRICKS
+------------------------------------------------------
+Set k-th bit:      x |= (1 << k)
+Clear k-th bit:    x &= ~(1 << k)
+Toggle k-th bit:   x ^= (1 << k)
+Check k-th bit:    (x & (1 << k)) != 0
+Remove lowest 1:   x &= (x - 1)
+Get lowest 1 bit:  x & (-x)
+Check power of 2:  (x & (x - 1)) == 0
+Count set bits:    while(x){ x &= (x-1); count++; }
+
+------------------------------------------------------
+8. BIT MASKS IN PROBLEMS
+------------------------------------------------------
+- Subset generation: for(mask = 0; mask < (1<<n); mask++)
+- State DP: bitmasks for on/off states
+- Gray code: gray = i ^ (i >> 1)
+- Low-level optimization: fast checks via bits
+
+------------------------------------------------------
+9. TRUTH TABLES
+------------------------------------------------------
+a | b | a&b | a|b | a^b
+0 | 0 |  0  |  0  |  0
+0 | 1 |  0  |  1  |  1
+1 | 0 |  0  |  1  |  1
+1 | 1 |  1  |  1  |  0
+
+------------------------------------------------------
+10. PRO CODER SHORTCUTS
+------------------------------------------------------
+Clear LSB set bit     -> x & (x - 1)
+Get LSB set bit       -> x & -x
+Check power of 2      -> (x & (x - 1)) == 0
+Flip all bits till MSB-> ((1 << (log2(x)+1)) - 1) - x
+Divide by 2           -> x >> 1
+Multiply by 2         -> x << 1
+Turn off k-th bit     -> x &= ~(1 << k)
+Keep only k-th bit    -> x & (1 << k)
+
+------------------------------------------------------
+11. PRACTICAL USES
+------------------------------------------------------
+- Compression of flags
+- Bitmask DP
+- Cryptography, Hashing
+- Fast set operations
+- Optimized search/state storage
+
+============================
+Master these patterns to handle low-level bit hacks,
+competitive problems, and system-level optimizations.
+============================

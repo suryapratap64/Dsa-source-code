@@ -3,6 +3,9 @@
 #include <iostream>
 #include <string>
 using namespace std;
+ 
+
+transform(s.begin(), s.end(), s.begin(), ::tolower);
 
 int main() {
     string s = "Hello World";

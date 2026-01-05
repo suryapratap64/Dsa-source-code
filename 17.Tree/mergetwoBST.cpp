@@ -1,6 +1,6 @@
 //approach one
 
-void inorder(TreeNOde<int>*root,vector<int>&in){
+void inorder(TreeNode<int>*root,vector<int>&in){
  if(root==NULL){
         return 0;
     }
